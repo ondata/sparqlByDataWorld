@@ -32,7 +32,7 @@ Here is your first SPARQL query. We've prepared this one to show you the nuts an
 
 Try running the query by pressing the Run button.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw "tutorial/sparqltutorial" %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -44,7 +44,7 @@ WHERE {
 }
 
 ~~~~
-{% enddatadotworld %}
+{% endraw %}
 
 Before digging into the query's steps, we should explain something important about how linked data is stored.
 
@@ -125,7 +125,7 @@ Yuck!
 
 To see what your first query looks like without setting a PREFIX:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw "tutorial/sparqltutorial" %}
 ~~~~
 SELECT ?ID ?FName
 
@@ -135,7 +135,7 @@ WHERE
     ?person <https://tutorial.linked.data.world/d/sparqltutorial/col-got-fname> ?FName .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw %}
 
 This is 100% technically accurate syntax (try running it!), but without the PREFIX declaration it is much less readable and user friendly.
 
