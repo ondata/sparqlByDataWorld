@@ -32,7 +32,7 @@ Here is your first SPARQL query. We've prepared this one to show you the nuts an
 
 Try running the query by pressing the Run button.
 
-{% raw "tutorial/sparqltutorial" %}
+{% raw %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -125,7 +125,7 @@ Yuck!
 
 To see what your first query looks like without setting a PREFIX:
 
-{% raw "tutorial/sparqltutorial" %}
+{% raw %}
 ~~~~
 SELECT ?ID ?FName
 
