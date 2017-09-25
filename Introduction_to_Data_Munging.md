@@ -20,7 +20,7 @@ The left side **[month(?birthDate)]** is where we set the value of our variable,
 
 In this case, we are using the SPARQL function MONTH to grab the month out of each character's birth date, and then we are assigning this value to ?birthMonth. Here's what it looks like as a full SPARQL query:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -33,7 +33,7 @@ WHERE {
 	BIND (MONTH(?birthDate) AS ?birthMonth)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 This returns a table of the birth months of each character in our dataset.
 
@@ -41,7 +41,7 @@ This returns a table of the birth months of each character in our dataset.
 
 So why is BIND useful? Well we can now run SPARQL's FILTER function on ?birthMonth. Let's filter for characters born in February:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -55,7 +55,7 @@ WHERE {
 	FILTER(?birthMonth = 2)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Neat, right?
 
@@ -71,7 +71,7 @@ With this one line, we've concatenated the first name, a space, and the last nam
 
 Now let's try filtering for full names longer than 12 characters. We can do this by using SPARQL's STRLEN function, which determines the length of strings.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -84,7 +84,7 @@ WHERE {
     FILTER (STRLEN(?name) > 12)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ### Why is this useful?
 

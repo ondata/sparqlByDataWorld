@@ -4,19 +4,19 @@
 
 Part A: Write a SPARQL query that displays the lowest age of any character in our dataset.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Part B: Write a SPARQL query that displays the highest age of any character in our dataset.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Having trouble?
 There are 2 methods for finding the highest and lowest values. You can either use the MIN and MAX functions or combine ORDER BY with LIMIT. If you can't get one method to work, just try the other.

@@ -4,12 +4,12 @@
 
 Write a query to return the first name and last name of all the characters in our dataset born after year 265 *and* before year 285.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Having trouble?
 

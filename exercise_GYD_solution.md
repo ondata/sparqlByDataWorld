@@ -2,7 +2,7 @@
 
 ## SPARQL Query
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 #The average age of each house within our dataset.
 
@@ -16,6 +16,6 @@ WHERE {
 }
 GROUP BY ?house
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Next Section: [Filtering Your Data](./Filtering_Your_Data.md)

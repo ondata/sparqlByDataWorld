@@ -4,7 +4,7 @@ In this solution, we use ORDER BY and LIMIT to find the min and max values.
 
 Part A solution:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 # Find the lowest age in the dataset.
 
@@ -18,11 +18,11 @@ WHERE {
 ORDER BY ?age
 LIMIT 1
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Part B solution:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 # Find the highest age in the dataset.
 
@@ -36,6 +36,6 @@ WHERE {
 ORDER BY DESC(?age)
 LIMIT 1
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Next Section: [Grouping Your Data](./Grouping_Your_Data.md)

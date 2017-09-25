@@ -20,7 +20,7 @@ which bound maxAge as the maximum age of any character in the dataset.
 
 Now what if we want to find the maximum age of any character within each house? We can do this by using SPARQL's GROUP BY function:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -32,7 +32,7 @@ WHERE {
 }
 GROUP BY ?house
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ---
 ### What's with the semicolon?

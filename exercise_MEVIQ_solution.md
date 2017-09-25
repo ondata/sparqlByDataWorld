@@ -1,6 +1,6 @@
 # Exercise - Solution
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 #Display all the people associated with House Stark.
 
@@ -13,7 +13,7 @@ WHERE {
   ?person GOT:col-got-fname ?FName .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 If your query didn't return Jon's name, you most likely searched for "Stark" using the `GOT:col-got-lname` property name instead of the `GOT:col-got-house` property name.
 

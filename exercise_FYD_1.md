@@ -3,11 +3,11 @@
 
 Try and write a function to return the first and last name of all characters in our dataset 17 years of age or younger. In addition, order the results by age from youngest to oldest.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Having trouble?
 

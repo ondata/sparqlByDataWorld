@@ -4,7 +4,7 @@ In this solution, we use the MIN and MAX aggregate functions to find the min and
 
 Part A solution:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 # Find the lowest age in the dataset.
 
@@ -16,11 +16,11 @@ WHERE {
   ?person GOT:col-got-age ?age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Part B solution:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 # Find the highest age in the dataset.
 
@@ -32,6 +32,6 @@ WHERE {
   ?person GOT:col-got-age ?age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Next Section: [Grouping Your Data](./Grouping_Your_Data.md)

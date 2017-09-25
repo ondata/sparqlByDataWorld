@@ -12,7 +12,7 @@ But what if you want to find a specific subset or entry of the data that contain
 ### Literals
 The below query contains new syntax in the form of a "literal," which is a fancy way of saying "an exact word or phrase within quotes." Let's say we know there is a person in the dataset with the exact first name "Daenerys" and we want to get her bio info:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -27,7 +27,7 @@ WHERE
     ?person GOT:col-got-age ?Age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 This query first searches for a resource with an FName property with value "Daenerys". In this case, "Daenerys" is a string and must be denoted with quotes in the form of a literal for the SPARQL processor to recognize it. Once the processor finds the resource, the rest of the statements bind the appropriate values to the variables `?FName`, `?LName`, `?House`, and `?Age`.
 
@@ -38,7 +38,7 @@ This query may have told the SPARQL processor to look for the resource with "Dae
 ## Searching for Numerical Values
 Unlike strings, numerical values like integers and doubles do not require quotes for the SPARQL processor to recognize them. For example, let's say we wanted to search for all characters who are 34 years old:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -53,14 +53,14 @@ WHERE
     ?person GOT:col-got-age ?Age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 SPARQL has many more data types like dates and booleans, you'll learn about these later in this tutorial.
 
 ## Searching for Data That Might Not Exist
 Many datasets have missing values, and basic SPARQL queries will only return data when the pattern in the WHERE section *exactly* matches the pattern in the data you're querying. This is because SPARQL is a *pattern-matching* query language. Data is only a match for the query if there is valid data in each piece of the statement declared within WHERE. This means SPARQL will return nothing when the data resource has a missing property name or value requested in WHERE. For example, try this query with which we want to show resources' IDs, first names, and ages.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -72,7 +72,7 @@ WHERE {
   ?person GOT:col-got-age ?Age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 As you can see, only the resources with valid property values for all three property names are listed, and unfortunately, some of our famous people do not have valid age values... Sorry, Robb, Viserys, and Rhaegar.
 

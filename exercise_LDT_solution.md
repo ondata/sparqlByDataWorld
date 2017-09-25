@@ -2,7 +2,7 @@
 
 ## SPARQL Query
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 #Return the total POV pages for all characters in house Stark.
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
@@ -16,7 +16,7 @@ WHERE {
     ?person2 GOT:col-got2-totalpagespov ?totalPagesPOV .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ##Congratulations!
 

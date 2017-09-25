@@ -6,11 +6,11 @@ Write a SPARQL query that displays the first and last names of all characters in
 
 Use the workspace below to draft your sparql query using PREFIX, SELECT, and WHERE.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Having trouble?
 

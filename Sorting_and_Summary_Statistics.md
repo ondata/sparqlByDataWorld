@@ -14,7 +14,7 @@ Now we will cover a few more keywords and functions that help you get more out o
 ## Sorting Your Data
 Use the **ORDER BY** key phrase after the WHERE section to sort data. For example, let's say instead of viewing the important people in our dataset organized by ID that we'd like to view them in alphabetical order by first name:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -27,7 +27,7 @@ WHERE {
 ORDER BY ?FName
   # Sorts data in alphabetical order by first name
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Try adding "**DESC**" to the "**ORDER BY**" phrase so it looks like `ORDER BY DESC (?LName)` and see what happens.
 
@@ -37,7 +37,7 @@ Next try `ORDER BY ?LName ?FName`, this will first order the results by last nam
 
 Use the **LIMIT** keyword at the end of your query to return a specific number of results. For example, suppose you only wanted to see the first 5 records, just to get a sense of the data.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -50,7 +50,7 @@ WHERE {
 }
 LIMIT 5
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 > ### NOTE
 >
@@ -62,7 +62,7 @@ You can also combine "LIMIT 1" with "ORDER BY ..." and "ORDER BY DESC ..." to fi
 
 Use the **MIN()** and **MAX()** functions within the SELECT portion of your query to return the lowest and highest value of the data, respectively. Something cool about the MIN() and MAX() functions is that they work on numerical values as well as strings, so returning the first FName from the data would look like this:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -73,7 +73,7 @@ WHERE {
   ?person GOT:col-got-fname ?FName .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 We've introduced some new syntax in the SELECT section with this query. What's going on here? The keyword **AS** divides the left and right side within the parentheses after SELECT, letting us set a *certain value* AS a *certain variable*.  For example, when we write
 
@@ -87,7 +87,7 @@ Take a look at the results. Notice how the property name is bound as "firstName"
 
 Unlike MIN() and MAX(), **AVG()** is only valid for numerical values, so it will not work on strings. To find the average of all the ages in the data, you could use the following query:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -98,14 +98,14 @@ WHERE {
   ?person GOT:col-got-age ?age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Check out the results. Young crowd!
 
 ## Aggregations
 Use **SUM()** and **COUNT()** to aggregate your data by value and by record. Here is an example of SUM():
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -116,7 +116,7 @@ WHERE {
   ?person GOT:col-got-age ?age .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 COUNT() can be very helpful in conjunction with AVG() and SUM(), because sometimes there will be missing data in your dataset. Three of the people in our dataset have no valid Age property value, so using COUNT() is a good practice to tell how many data points compose the other figures.
 

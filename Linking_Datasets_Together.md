@@ -10,7 +10,7 @@ Now let's actually link up some data! You might have noticed that we have two da
 
 Using the power of SPARQL queries, we can query and manipulate data from both of these datasets within one query. Here's an example:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -23,7 +23,7 @@ WHERE {
     ?person2 GOT:col-got2-book1pagespov ?book1PagesPOV .
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Go ahead and run this. Note that the results contain the age and number of pages from book1 that are from each character's POV.
 
@@ -31,7 +31,7 @@ This works because the first name from *GOT.csv* matches the name in *GOT2.csv*,
 
 Now we can start doing some interesting stuff. Here's an example where we take characters who have an age entry and find out what percentage of their total POV pages are in book 1:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -46,7 +46,7 @@ WHERE {
 }
 ORDER BY DESC(?age)
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ### Why is this useful?
 

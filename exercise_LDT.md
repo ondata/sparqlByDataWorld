@@ -6,11 +6,11 @@ Write a SPARQL query to return the total POV pages for all characters in house S
 
 You will need two prefixes this time:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 
 ## Ready for the solution?

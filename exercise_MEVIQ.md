@@ -6,11 +6,11 @@ Write a SPARQL query that displays all the people associated with House Stark.
 
 Use the workspace below to draft your SPARQL query using a string literal to find the exact value "Stark" in the data.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ## Having trouble?
 

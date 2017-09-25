@@ -2,7 +2,7 @@
 
 ## SPARQL Query:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -17,6 +17,6 @@ WHERE {
     FILTER(?birthMonth = 4)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ##Next Section: [Linking Datasets Together](./Linking_Datasets_Together.md)

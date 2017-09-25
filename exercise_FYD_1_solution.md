@@ -2,7 +2,7 @@
 
 ## SPARQL Query
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 #Return the first and last name of all characters in our dataset 17 years of age or younger.
 
@@ -18,7 +18,7 @@ WHERE {
 }
 ORDER BY ?Age
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 ##Next Exercise
 When you're ready, try the next [exercise](./exercise_FYD_2.md).

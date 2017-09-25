@@ -11,7 +11,7 @@ The last section covered how to find a specific piece of info about a dataset, l
 
 What if we want to return all characters in our dataset above a certain age? We can do this using SPARQL's FILTER function. This is a query that returns the first and last name of all characters in our dataset above 10 years of age:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -24,7 +24,7 @@ WHERE {
 	FILTER (?Age > 10)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 The FILTER function allows us to, as expected, filter for the results we want from the query.
 In this example we took the variable we are filtering for and applied one of SPARQL's filter functions. In this case it looks like:
@@ -39,7 +39,7 @@ Note that this filters *for* any characters above 10, the same as filtering *out
 
 Notice that these results are listed by their place within our dataset, instead of ordered by age. We already know how to order our results, so let's make the change we need to order the results so that the highest age comes first.
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 
@@ -53,7 +53,7 @@ WHERE {
 }
 ORDER BY DESC(?Age)
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Now we have a listing of all characters in our data set older than 10, ordered from oldest to youngest.
 
@@ -71,7 +71,7 @@ We put the date in quotes and add "^^xsd:date" after to signify that this value 
 
 Here's what the whole query looks like:
 
-{% datadotworld "tutorial/sparqltutorial" %}
+{% raw  %}
 ~~~~
 PREFIX GOT: <https://tutorial.linked.data.world/d/sparqltutorial/>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
@@ -85,7 +85,7 @@ WHERE {
 	FILTER (?BirthDate < "0280-01-01"^^xsd:date)
 }
 ~~~~
-{% enddatadotworld %}
+{% endraw  %}
 
 Notice that we added the prefix:
 
