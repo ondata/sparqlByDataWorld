@@ -1,3 +1,9 @@
+# License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/).
+
+The creator is [data.world](https://data.world/about/)
+
 # SPARQL Tutorial
 
 Welcome to [data.world's](https://data.world) SPARQL \(pronounced "Sparkle"\) tutorial. We hope you get a lot out of this tutorial and start using the powerful SPARQL query language to retrieve, modify, and make the best use of linked data.
